@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="pt-BR"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1">&lt;title&gt;Payback Keola 2026 — SP e Farm&lt;/title&gt;</p>
+<p class="p1">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>* { box-sizing: border-box; margin: 0; padding: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f3; color: #1a1a1a; padding: 2rem; max-width: 900px; margin: 0 auto; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>h1 { font-size: 18px; font-weight: 500; margin-bottom: 0.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.sub { font-size: 13px; color: #888; margin-bottom: 1.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.section-title { font-size: 11px; color: #aaa; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; margin-top: 1.25rem; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.view-toggle { display: flex; gap: 0; margin-bottom: 1.5rem; border-radius: 10px; overflow: hidden; border: 1px solid #e5e5e5; width: fit-content; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.view-btn { padding: 10px 28px; font-size: 14px; font-weight: 500; cursor: pointer; border: none; background: #fff; color: #888; transition: all 0.15s; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.view-btn.active.sp <span class="Apple-converted-space">  </span>{ background: #185FA5; color: #fff; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.view-btn.active.farm { background: #1D9E75; color: #fff; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.view-btn:not(:last-child) { border-right: 1px solid #e5e5e5; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 1.25rem; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.metric { background: #fff; border-radius: 10px; border: 1px solid #e5e5e5; padding: 0.85rem 1rem; text-align: center; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.metric.verde { border: 2px solid #1D9E75; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.metric.azul<span class="Apple-converted-space">  </span>{ border: 2px solid #185FA5; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.metric.amber { border: 2px solid #BA7517; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.metric-label { font-size: 12px; color: #888; margin-bottom: 4px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.metric-value { font-size: 20px; font-weight: 500; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.metric-sub <span class="Apple-converted-space">  </span>{ font-size: 11px; color: #aaa; margin-top: 4px; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hist-table { width: 100%; border-collapse: collapse; font-size: 13px; background: #fff; border-radius: 10px; overflow: hidden; border: 1px solid #e5e5e5; margin-bottom: 1.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hist-table th { background: #f5f5f3; padding: 8px 14px; text-align: left; font-weight: 500; font-size: 12px; color: #888; border-bottom: 1px solid #e5e5e5; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hist-table td { padding: 8px 14px; border-bottom: 1px solid #f5f5f5; font-size: 13px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hist-table tr:last-child td { border-bottom: none; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.hist-table .total-row td { font-weight: 500; background: #fafaf8; border-top: 1px solid #e5e5e5; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.up <span class="Apple-converted-space">  </span>{ color: #1D9E75; font-weight: 500; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.down { color: #E24B4A; font-weight: 500; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.neu<span class="Apple-converted-space">  </span>{ color: #888; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.warn { color: #BA7517; font-weight: 500; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.controls { background: #fff; border-radius: 10px; border: 1px solid #e5e5e5; padding: 1rem 1.25rem; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 14px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.ctrl-row { display: flex; align-items: center; gap: 12px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.ctrl-label { font-size: 13px; color: #555; min-width: 230px; line-height: 1.4; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.ctrl-tag { font-size: 10px; color: #aaa; display: block; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.ctrl-val { font-size: 14px; font-weight: 500; min-width: 65px; text-align: right; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>input[type=range] { flex: 1; cursor: pointer; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>input[type=range].sp-color <span class="Apple-converted-space">  </span>{ accent-color: #185FA5; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>input[type=range].junho<span class="Apple-converted-space">      </span>{ accent-color: #BA7517; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>input[type=range].julho<span class="Apple-converted-space">      </span>{ accent-color: #378ADD; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>input[type=range].farm-color { accent-color: #1D9E75; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.tabs { display: flex; gap: 6px; flex-wrap: wrap; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.tab { padding: 6px 14px; border-radius: 20px; border: 1px solid #e5e5e5; font-size: 13px; cursor: pointer; background: #fff; color: #555; transition: all 0.15s; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.tab.active.sp <span class="Apple-converted-space">  </span>{ background: #185FA5; color: #fff; border-color: #185FA5; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.tab.active.farm { background: #1D9E75; color: #fff; border-color: #1D9E75; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.ref-box { border-radius: 6px; padding: 0.75rem 1rem; font-size: 13px; margin-bottom: 1.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.ref-box.sp-ref <span class="Apple-converted-space">  </span>{ background: #E6F1FB; border-left: 3px solid #185FA5; color: #0C447C; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.ref-box.farm-ref { background: #FAEEDA; border-left: 3px solid #BA7517; color: #633806; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.insight { border-radius: 6px; padding: 0.75rem 1rem; font-size: 13px; margin-bottom: 1.25rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.insight.blue<span class="Apple-converted-space">  </span>{ background: #E6F1FB; border-left: 3px solid #185FA5; color: #0C447C; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.insight.green { background: #EAF3DE; border-left: 3px solid #639922; color: #3B6D11; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.chart-wrap { background: #fff; border-radius: 10px; border: 1px solid #e5e5e5; padding: 1.25rem; position: relative; height: 300px; margin-bottom: 0.75rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.legend { display: flex; gap: 12px; flex-wrap: wrap; font-size: 12px; color: #888; margin-bottom: 1.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.legend span { display: flex; align-items: center; gap: 5px; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.dot<span class="Apple-converted-space">  </span>{ width: 10px; height: 10px; border-radius: 2px; display: inline-block; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.dash { width: 18px; height: 0; border-top: 2px dashed #E24B4A; display: inline-block; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.month-table { width: 100%; border-collapse: collapse; font-size: 13px; background: #fff; border-radius: 10px; overflow: hidden; border: 1px solid #e5e5e5; margin-bottom: 1.5rem; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.month-table th { background: #f5f5f3; padding: 8px 12px; text-align: left; font-weight: 500; font-size: 12px; color: #888; border-bottom: 1px solid #e5e5e5; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.month-table td { padding: 8px 12px; border-bottom: 1px solid #f0f0f0; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.month-table tr:last-child td { border-bottom: none; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 500; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.badge.obra-sp <span class="Apple-converted-space">  </span>{ background: #E6F1FB; color: #0C447C; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.badge.obra-f<span class="Apple-converted-space">    </span>{ background: #E1F5EE; color: #0F6E56; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.badge.pos-sp<span class="Apple-converted-space">    </span>{ background: #F1EFE8; color: #5F5E5A; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.badge.pos-f <span class="Apple-converted-space">    </span>{ background: #F1EFE8; color: #5F5E5A; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.badge.junho-ev<span class="Apple-converted-space">  </span>{ background: #FAEEDA; color: #633806; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.badge.julho-ev<span class="Apple-converted-space">  </span>{ background: #E6F1FB; color: #0C447C; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.badge.breakeven { background: #EAF3DE; color: #3B6D11; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>.view { display: none; }</p>
+<p class="p1"><span class="Apple-converted-space">  </span>.view.active { display: block; }</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h1&gt;Payback — Keola 2026&lt;/h1&gt;</p>
+<p class="p1">&lt;p class="sub"&gt;Obra paralela · Investimento R$250k · Base: 2025 + Q1 2026&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="view-toggle"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="view-btn active sp" onclick="switchView('sp',this)"&gt;FATURAMENTO SP&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;button class="view-btn farm"<span class="Apple-converted-space">      </span>onclick="switchView('farm',this)"&gt;FATURAMENTO FARM&lt;/button&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ══════════════════ SP ══════════════════ --&gt;</p>
+<p class="p1">&lt;div class="view active" id="view-sp"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="section-title"&gt;Histórico SP&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;table class="hist-table"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Período&lt;/th&gt;&lt;th&gt;Mês&lt;/th&gt;&lt;th&gt;Lucro&lt;/th&gt;&lt;th&gt;Obs&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;2025 completo&lt;/td&gt;&lt;td&gt;Total&lt;/td&gt;&lt;td&gt;&lt;strong&gt;R$1.188.101&lt;/strong&gt;&lt;/td&gt;&lt;td class="neu"&gt;ano completo&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;2025 completo&lt;/td&gt;&lt;td&gt;Média mensal&lt;/td&gt;&lt;td&gt;&lt;strong&gt;R$99k&lt;/strong&gt;&lt;/td&gt;&lt;td class="neu"&gt;1.188.101 ÷ 12&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td rowspan="3"&gt;Q1 2026&lt;/td&gt;&lt;td&gt;Janeiro&lt;/td&gt;&lt;td&gt;R$14k&lt;/td&gt;&lt;td class="down"&gt;atípico — muito baixo&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Fevereiro&lt;/td&gt;&lt;td&gt;R$115k&lt;/td&gt;&lt;td class="up"&gt;+16% vs média 2025&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Março&lt;/td&gt;&lt;td&gt;R$148k&lt;/td&gt;&lt;td class="up"&gt;+49% vs média 2025&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr class="total-row"&gt;&lt;td&gt;Q1 2026&lt;/td&gt;&lt;td&gt;Média (3 meses)&lt;/td&gt;&lt;td&gt;&lt;strong&gt;R$92k&lt;/strong&gt;&lt;/td&gt;&lt;td class="neu"&gt;276k ÷ 3&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr class="total-row"&gt;&lt;td&gt;Q1 2026&lt;/td&gt;&lt;td&gt;Média Fev+Mar (excl. Jan)&lt;/td&gt;&lt;td&gt;&lt;strong&gt;R$132k&lt;/strong&gt;&lt;/td&gt;&lt;td class="up"&gt;tendência atual&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/table&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="ref-box sp-ref"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;strong&gt;SP crescendo forte.&lt;/strong&gt; Fev+Mar 2026 média de &lt;strong&gt;R$132k/mês&lt;/strong&gt; — +33% acima da média 2025 (R$99k). Janeiro (R$14k) foi claramente atípico. Slider parte de R$99k — teste com R$132k para cenário tendência atual.</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="section-title"&gt;Configurar cenário SP 2026&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="controls"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="ctrl-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="ctrl-label"&gt;Início da obra&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="tabs" id="sp-start-tabs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab active sp" onclick="setStartSP(3,this)"&gt;Abril&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab" onclick="setStartSP(4,this)"&gt;Maio&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab" onclick="setStartSP(5,this)"&gt;Junho&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab" onclick="setStartSP(6,this)"&gt;Julho&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="ctrl-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="ctrl-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Lucro mensal SP 2026</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="ctrl-tag"&gt;R$99k = média 2025 · R$132k = tendência Fev-Mar 2026&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="range" class="sp-color" id="sp-lucro" min="60" max="220" value="99" step="1" oninput="updateSP()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="ctrl-val" id="sp-lucro-val"&gt;R$99k&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="grid3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="metric amber"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="metric-label"&gt;Recuperado durante obra&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="metric-value" id="sp-v-durante" style="color:#BA7517;"&gt;—&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="metric-sub"&gt;3 meses × lucro/mês&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="metric azul"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="metric-label"&gt;Payback total&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="metric-value" id="sp-v-total" style="color:#185FA5;"&gt;—&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="metric-sub"&gt;início obra → break-even&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="metric"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="metric-label"&gt;Restante pós-obra&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="metric-value" id="sp-v-restante"&gt;—&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="metric-sub" id="sp-s-restante"&gt;—&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="insight blue" id="sp-insight"&gt;Calculando...&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="section-title"&gt;Recuperação acumulada — SP&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="chart-wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;canvas id="sp-chart" role="img" aria-label="Payback SP acumulado mês a mês"&gt;Gráfico payback SP.&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="legend"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span&gt;&lt;span class="dot" style="background:#85B7EB;"&gt;&lt;/span&gt;Durante obra&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span&gt;&lt;span class="dot" style="background:#B5D4F4;"&gt;&lt;/span&gt;Pós-obra (negativo)&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span&gt;&lt;span class="dot" style="background:#1D9E75;"&gt;&lt;/span&gt;Break-even atingido&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span&gt;&lt;span class="dash"&gt;&lt;/span&gt;R$250k&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="section-title"&gt;Detalhe mês a mês — SP&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;table class="month-table"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Mês&lt;/th&gt;&lt;th&gt;Fase&lt;/th&gt;&lt;th&gt;Lucro mês&lt;/th&gt;&lt;th&gt;Acumulado&lt;/th&gt;&lt;th&gt;Falta&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;tbody id="sp-tbody"&gt;&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/table&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ══════════════════ FARM ══════════════════ --&gt;</p>
+<p class="p1">&lt;div class="view" id="view-farm"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="section-title"&gt;Histórico Farm&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;table class="hist-table"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Período&lt;/th&gt;&lt;th&gt;Mês&lt;/th&gt;&lt;th&gt;Lucro&lt;/th&gt;&lt;th&gt;Obs&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;2025 completo&lt;/td&gt;&lt;td&gt;Total&lt;/td&gt;&lt;td&gt;&lt;strong&gt;R$485k&lt;/strong&gt;&lt;/td&gt;&lt;td class="neu"&gt;ano completo&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;2025 completo&lt;/td&gt;&lt;td&gt;Média mensal&lt;/td&gt;&lt;td&gt;&lt;strong&gt;R$40k&lt;/strong&gt;&lt;/td&gt;&lt;td class="neu"&gt;485k ÷ 12&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;2025 — eventos&lt;/td&gt;&lt;td&gt;Julho&lt;/td&gt;&lt;td&gt;&lt;strong&gt;R$95k&lt;/strong&gt;&lt;/td&gt;&lt;td class="up"&gt;FWS + Greenhouse + ZBreak&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;2025 — normal&lt;/td&gt;&lt;td&gt;Média 11 meses&lt;/td&gt;&lt;td&gt;&lt;strong&gt;R$35k&lt;/strong&gt;&lt;/td&gt;&lt;td class="neu"&gt;(485k − 95k) ÷ 11&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td rowspan="3"&gt;Q1 2026&lt;/td&gt;&lt;td&gt;Janeiro&lt;/td&gt;&lt;td&gt;R$25k&lt;/td&gt;&lt;td class="neu"&gt;normal&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Fevereiro&lt;/td&gt;&lt;td&gt;R$33k&lt;/td&gt;&lt;td class="neu"&gt;normal&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr&gt;&lt;td&gt;Março&lt;/td&gt;&lt;td&gt;R$54k&lt;/td&gt;&lt;td class="up"&gt;crescendo&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;tr class="total-row"&gt;&lt;td&gt;Q1 2026&lt;/td&gt;&lt;td&gt;Média (3 meses)&lt;/td&gt;&lt;td&gt;&lt;strong&gt;R$38k&lt;/strong&gt;&lt;/td&gt;&lt;td class="neu"&gt;113k ÷ 3 — consistente&lt;/td&gt;&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/table&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="ref-box farm-ref"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;strong&gt;Referência eventos 2025:&lt;/strong&gt; Julho com FWS + 1 Greenhouse + ZBreak → &lt;strong&gt;R$95k&lt;/strong&gt;.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>Em 2026: Junho = Retiro Vox + FWS · Julho = 2× Greenhouse + ZBreak.</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="section-title"&gt;Configurar cenário Farm 2026&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="controls"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="ctrl-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="ctrl-label"&gt;Início da obra&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="tabs" id="farm-start-tabs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab active farm" onclick="setStartFarm(3,this)"&gt;Abril&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab" onclick="setStartFarm(4,this)"&gt;Maio&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab" onclick="setStartFarm(5,this)"&gt;Junho&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab" onclick="setStartFarm(6,this)"&gt;Julho&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="ctrl-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="ctrl-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;strong&gt;Junho 2026&lt;/strong&gt; — Retiro Vox + FWS</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="ctrl-tag"&gt;ref: Jul 2025 com 3 eventos = R$95k&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="range" class="junho" id="farm-jun" min="10" max="200" value="70" step="1" oninput="updateFarm()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="ctrl-val" id="farm-jun-val"&gt;R$70k&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="ctrl-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="ctrl-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;strong&gt;Julho 2026&lt;/strong&gt; — 2× Greenhouse + ZBreak</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="ctrl-tag"&gt;ref: Jul 2025 = R$95k · 2 Greenhouses tende a superar&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="range" class="julho" id="farm-jul" min="10" max="200" value="95" step="1" oninput="updateFarm()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="ctrl-val" id="farm-jul-val"&gt;R$95k&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="ctrl-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="ctrl-label"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Lucro meses normais Farm 2026</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="ctrl-tag"&gt;base R$35k (2025 sem eventos) · Q1 2026: R$38k&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;input type="range" class="farm-color" id="farm-pos" min="20" max="100" value="35" step="1" oninput="updateFarm()"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="ctrl-val" id="farm-pos-val"&gt;R$35k&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="grid3"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="metric amber"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="metric-label"&gt;Recuperado durante obra&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="metric-value" id="farm-v-durante" style="color:#BA7517;"&gt;—&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="metric-sub"&gt;3 meses de obra&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="metric verde"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="metric-label"&gt;Payback total&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="metric-value" id="farm-v-total" style="color:#1D9E75;"&gt;—&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="metric-sub"&gt;início obra → break-even&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="metric"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="metric-label"&gt;Jun + Jul 2026 combinado&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="metric-value" id="farm-v-junjul"&gt;—&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="metric-sub" id="farm-s-junjul"&gt;vs R$95k Jul 2025&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="insight green" id="farm-insight"&gt;Calculando...&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="section-title"&gt;Recuperação acumulada — Farm&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="chart-wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;canvas id="farm-chart" role="img" aria-label="Payback Farm acumulado mês a mês"&gt;Gráfico payback Farm.&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="legend"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span&gt;&lt;span class="dot" style="background:#9FE1CB;"&gt;&lt;/span&gt;Obra — normal&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span&gt;&lt;span class="dot" style="background:#EF9F27;"&gt;&lt;/span&gt;Junho — Retiro Vox + FWS&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span&gt;&lt;span class="dot" style="background:#378ADD;"&gt;&lt;/span&gt;Julho — 2× Greenhouse + ZBreak&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span&gt;&lt;span class="dot" style="background:#B5D4F4;"&gt;&lt;/span&gt;Pós-obra (negativo)&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span&gt;&lt;span class="dot" style="background:#1D9E75;"&gt;&lt;/span&gt;Break-even atingido&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;span&gt;&lt;span class="dash"&gt;&lt;/span&gt;R$250k&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p class="section-title"&gt;Detalhe mês a mês — Farm&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;table class="month-table"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Mês&lt;/th&gt;&lt;th&gt;Fase / Evento&lt;/th&gt;&lt;th&gt;Lucro mês&lt;/th&gt;&lt;th&gt;Acumulado&lt;/th&gt;&lt;th&gt;Falta&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;tbody id="farm-tbody"&gt;&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/table&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">const INVEST = 250;</p>
+<p class="p1">const MONTH_NAMES = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];</p>
+<p class="p1">const FARM_NORMAL = 35;</p>
+<p class="p2"><br></p>
+<p class="p1">let spStart=3, spLucro=99, spChart=null;</p>
+<p class="p1">let farmStart=3, farmJun=70, farmJul=95, farmPos=35, farmChart=null;</p>
+<p class="p2"><br></p>
+<p class="p1">function calcRows(startMonth, getLucro) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const rows=[]; let acum=0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const obraEnd=startMonth+3; let done=false;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>for(let i=startMonth; i&lt;30&amp;&amp;!done; i++){</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const mi=i%12, fase=i&lt;obraEnd?'obra':'pos';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const lucro=getLucro(mi,fase);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const prev=acum; acum+=lucro;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>rows.push({month:MONTH_NAMES[mi],mi,fase,lucro,acum,falta:Math.max(0,INVEST-acum),breakeven:prev&lt;INVEST&amp;&amp;acum&gt;=INVEST});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(acum&gt;=INVEST) done=true;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(rows.length&gt;16) done=true;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return rows;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function makeChart(canvasId, rows, getColor) {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return new Chart(document.getElementById(canvasId),{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>type:'bar',</p>
+<p class="p1"><span class="Apple-converted-space">    </span>data:{labels:rows.map(r=&gt;r.month),datasets:[</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{label:'Acumulado',data:rows.map(r=&gt;Math.round(r.acum)),backgroundColor:rows.map(getColor),borderRadius:4,order:2},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>{label:'Meta',data:Array(rows.length).fill(INVEST),type:'line',borderColor:'#E24B4A',borderWidth:2,borderDash:[6,4],pointRadius:0,fill:false,order:1}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>]},</p>
+<p class="p1"><span class="Apple-converted-space">    </span>options:{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>responsive:true,maintainAspectRatio:false,animation:{duration:250},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>plugins:{legend:{display:false},tooltip:{callbacks:{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>label:ctx=&gt;ctx.datasetIndex===0?(ctx.parsed.y&gt;=INVEST?`Acumulado: R$${ctx.parsed.y}k ✓`:`Acumulado: R$${ctx.parsed.y}k`):`Meta: R$${ctx.parsed.y}k`,</p>
+<p class="p1"><span class="Apple-converted-space">        </span>afterLabel:ctx=&gt;ctx.datasetIndex===0&amp;&amp;ctx.parsed.y&lt;INVEST?`Falta: R$${INVEST-ctx.parsed.y}k`:''</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}}},</p>
+<p class="p1"><span class="Apple-converted-space">      </span>scales:{</p>
+<p class="p1"><span class="Apple-converted-space">        </span>x:{grid:{display:false},ticks:{font:{size:12}}},</p>
+<p class="p1"><span class="Apple-converted-space">        </span>y:{grid:{color:'rgba(0,0,0,0.06)'},max:400,ticks:{font:{size:12},callback:v=&gt;`R$${v}k`}}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function refreshChart(chart,rows,getColor){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>chart.data.labels=rows.map(r=&gt;r.month);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>chart.data.datasets[0].data=rows.map(r=&gt;Math.round(r.acum));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>chart.data.datasets[0].backgroundColor=rows.map(getColor);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>chart.data.datasets[1].data=Array(rows.length).fill(INVEST);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>chart.update();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function updateSP(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>spLucro=parseInt(document.getElementById('sp-lucro').value);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('sp-lucro-val').textContent=`R$${spLucro}k`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const rows=calcRows(spStart,()=&gt;spLucro);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const durante=spLucro*3;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const restante=Math.max(0,INVEST-durante);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const total=rows.length;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('sp-v-durante').textContent=`R$${durante}k`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('sp-v-total').textContent=`${total} ${total===1?'mês':'meses'}`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('sp-v-restante').textContent=restante===0?'R$0k — quitado':`R$${restante}k`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('sp-s-restante').textContent=restante===0?'100% quitado durante obra':`250k − ${durante}k`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('sp-insight').innerHTML=</p>
+<p class="p1"><span class="Apple-converted-space">    </span>`SP iniciando em &lt;strong&gt;${MONTH_NAMES[spStart%12]}&lt;/strong&gt; com &lt;strong&gt;R$${spLucro}k/mês&lt;/strong&gt;. `+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>`Recupera &lt;strong&gt;R$${durante}k durante a obra&lt;/strong&gt;. `+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>(restante===0</p>
+<p class="p1"><span class="Apple-converted-space">      </span>?`&lt;strong style="color:#1D9E75;"&gt;Investimento 100% quitado durante a obra!&lt;/strong&gt;`</p>
+<p class="p1"><span class="Apple-converted-space">      </span>:`Restante de &lt;strong&gt;R$${restante}k&lt;/strong&gt; quitado em &lt;strong&gt;${total-3} ${total-3===1?'mês':'meses'}&lt;/strong&gt; pós-obra.`)+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>` Payback total: &lt;strong&gt;${total} ${total===1?'mês':'meses'}&lt;/strong&gt;.`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const getColor=r=&gt;r.fase==='obra'?'#85B7EB':r.acum&gt;=INVEST?'#1D9E75':'#B5D4F4';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(!spChart){spChart=makeChart('sp-chart',rows,getColor);}else{refreshChart(spChart,rows,getColor);}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const tbody=document.getElementById('sp-tbody');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>tbody.innerHTML='';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>rows.forEach(r=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const tr=document.createElement('tr');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(r.breakeven)tr.style.background='#f0faf4';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const badge=r.fase==='obra'?'&lt;span class="badge obra-sp"&gt;Obra&lt;/span&gt;':r.breakeven?'&lt;span class="badge breakeven"&gt;Break-even ✓&lt;/span&gt;':'&lt;span class="badge pos-sp"&gt;Pós-obra&lt;/span&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>tr.innerHTML=`&lt;td style="font-weight:500;"&gt;${r.month}&lt;/td&gt;&lt;td&gt;${badge}&lt;/td&gt;&lt;td&gt;R$${Math.round(r.lucro)}k&lt;/td&gt;&lt;td&gt;R$${Math.round(r.acum)}k&lt;/td&gt;&lt;td style="color:${r.falta===0?'#1D9E75':'#aaa'};"&gt;${r.falta===0?'—':'R$'+Math.round(r.falta)+'k'}&lt;/td&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>tbody.appendChild(tr);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function setStartSP(m,btn){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>spStart=m;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll('#sp-start-tabs .tab').forEach(t=&gt;t.classList.remove('active','sp'));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>btn.classList.add('active','sp');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>updateSP();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function updateFarm(){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>farmJun=parseInt(document.getElementById('farm-jun').value);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>farmJul=parseInt(document.getElementById('farm-jul').value);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>farmPos=parseInt(document.getElementById('farm-pos').value);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('farm-jun-val').textContent=`R$${farmJun}k`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('farm-jul-val').textContent=`R$${farmJul}k`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('farm-pos-val').textContent=`R$${farmPos}k`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const rows=calcRows(farmStart,(mi,fase)=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(mi===5)return farmJun;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(mi===6)return farmJul;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return fase==='obra'?FARM_NORMAL:farmPos;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const durante=rows.filter(r=&gt;r.fase==='obra').reduce((s,r)=&gt;s+r.lucro,0);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const junjul=farmJun+farmJul;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const diff=junjul-95;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('farm-v-durante').textContent=`R$${Math.round(durante)}k`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('farm-v-total').textContent=`${rows.length} ${rows.length===1?'mês':'meses'}`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('farm-v-junjul').textContent=`R$${junjul}k`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('farm-s-junjul').textContent=diff&gt;=0?`+R$${diff}k vs Jul 2025 (R$95k)`:`-R$${Math.abs(diff)}k vs Jul 2025 (R$95k)`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('farm-insight').innerHTML=</p>
+<p class="p1"><span class="Apple-converted-space">    </span>`Farm iniciando em &lt;strong&gt;${MONTH_NAMES[farmStart%12]}&lt;/strong&gt;. `+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>`Meses normais de obra: &lt;strong&gt;R$${FARM_NORMAL}k&lt;/strong&gt;. `+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>`Jun + Jul 2026 somam &lt;strong&gt;R$${junjul}k&lt;/strong&gt; `+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>`(${diff&gt;=0?`&lt;strong style="color:#1D9E75;"&gt;+R$${diff}k acima&lt;/strong&gt;`:`&lt;strong style="color:#E24B4A;"&gt;R$${Math.abs(diff)}k abaixo&lt;/strong&gt;`} do R$95k de Jul 2025). `+</p>
+<p class="p1"><span class="Apple-converted-space">    </span>`Break-even em &lt;strong&gt;${rows.length} meses&lt;/strong&gt; do início da obra.`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const getColor=r=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(r.mi===5)return'#EF9F27';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(r.mi===6)return'#378ADD';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(r.fase==='obra')return'#9FE1CB';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return r.acum&gt;=INVEST?'#1D9E75':'#B5D4F4';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>};</p>
+<p class="p1"><span class="Apple-converted-space">  </span>if(!farmChart){farmChart=makeChart('farm-chart',rows,getColor);}else{refreshChart(farmChart,rows,getColor);}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const tbody=document.getElementById('farm-tbody');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>tbody.innerHTML='';</p>
+<p class="p1"><span class="Apple-converted-space">  </span>rows.forEach(r=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const tr=document.createElement('tr');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(r.breakeven)tr.style.background='#f0faf4';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let badge='',cor='#1a1a1a',fw='400';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if(r.mi===5){badge=`&lt;span class="badge junho-ev"&gt;${r.fase==='obra'?'Obra + ':''}Retiro Vox + FWS&lt;/span&gt;`;cor='#BA7517';fw='500';}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>else if(r.mi===6){badge=`&lt;span class="badge julho-ev"&gt;${r.fase==='obra'?'Obra + ':''}2× Greenhouse + ZBreak&lt;/span&gt;`;cor='#185FA5';fw='500';}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>else if(r.fase==='obra'){badge='&lt;span class="badge obra-f"&gt;Obra&lt;/span&gt;';}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>else if(r.breakeven){badge='&lt;span class="badge breakeven"&gt;Break-even ✓&lt;/span&gt;';}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>else{badge='&lt;span class="badge pos-f"&gt;Pós-obra&lt;/span&gt;';}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>tr.innerHTML=`&lt;td style="font-weight:500;"&gt;${r.month}&lt;/td&gt;&lt;td&gt;${badge}&lt;/td&gt;&lt;td style="color:${cor};font-weight:${fw};"&gt;R$${Math.round(r.lucro)}k&lt;/td&gt;&lt;td&gt;R$${Math.round(r.acum)}k&lt;/td&gt;&lt;td style="color:${r.falta===0?'#1D9E75':'#aaa'};"&gt;${r.falta===0?'—':'R$'+Math.round(r.falta)+'k'}&lt;/td&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>tbody.appendChild(tr);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>});</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function setStartFarm(m,btn){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>farmStart=m;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll('#farm-start-tabs .tab').forEach(t=&gt;t.classList.remove('active','farm'));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>btn.classList.add('active','farm');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>updateFarm();</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">function switchView(v,btn){</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll('.view').forEach(el=&gt;el.classList.remove('active'));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.querySelectorAll('.view-btn').forEach(el=&gt;el.classList.remove('active','sp','farm'));</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById('view-'+v).classList.add('active');</p>
+<p class="p1"><span class="Apple-converted-space">  </span>btn.classList.add('active',v);</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">updateSP(); updateFarm();</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
